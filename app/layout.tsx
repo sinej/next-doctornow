@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { ToastContainer } from "react-toastify";
+
 import "./globals.css";
+import "react-toastify/dist/ReactToastify.css";
+
+import Header from "@/components/layouts/header/Header";
+import Nav from "@/components/layouts/nav/nav";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "DoctorNow",
-  description: "doctor community",
+  title: "eBay shop",
+  description: "eBay shop",
 };
 
 export default function RootLayout({
@@ -16,7 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ToastContainer/>
+        {children}
+      </body>
     </html>
   );
 }
