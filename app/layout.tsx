@@ -5,10 +5,6 @@ import { ToastContainer } from "react-toastify";
 import "./globals.css";
 import "react-toastify/dist/ReactToastify.css";
 
-import Header from "@/components/layouts/header/Header";
-import Nav from "@/components/layouts/nav/nav";
-
-
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
