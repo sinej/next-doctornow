@@ -11,7 +11,7 @@ interface PageProps {
 const Page = ({params}: PageProps) => {
     return (
         <MainLayout>
-            <div className="max-w-[1200px] mx-auto">
+            <div className="max-w-[1200px] mx-auto flex items-start">
                 {product.url ?
                     <img className="w-[40%] rounded-lg" src={`${product?.url}/280`} alt=""/> :
                     <div className="w-[40%]"></div>
@@ -42,6 +42,18 @@ const Page = ({params}: PageProps) => {
                                 null
                                 }
                             </div>
+                            
+                            <button className="bg-[#3498C9] text-white py-2 px-20 rounded-full cursor-pointer">
+                                장바구니 추가
+                            </button>
+
+                        </div>
+                        
+                        <div className="border-b py-1"></div>
+                        
+                        <div className="pt-3">
+                            <div className="font-semibold">Description</div>
+                            <div className="text-sm">{product?.description}</div>
                         </div>
                     </div>
                 </div>
