@@ -15,6 +15,9 @@ const Page = () => {
                 <div className="relative flex items-baseline justify-between gap-2">
                     <div className="w-[65%]">
                         <CartItem key={product.id} {...product} />
+                        <CartItem key={product.id} {...product} />
+                        <CartItem key={product.id} {...product} />
+                        <CartItem key={product.id} {...product} />
                     </div>
                 </div>
             </div>
