@@ -3,6 +3,7 @@
 import React from 'react';
 import MainLayout from "@/components/layouts/MainLayout";
 import {product, products} from "@/mock/products";
+import SimilarProducts from "@/components/ui/similarProducts";
 
 interface PageProps {
     params?: React.ReactNode,
@@ -58,6 +59,7 @@ const Page = ({params}: PageProps) => {
                     </div>
                 </div>
             </div>
+                <SimilarProducts/>
         </MainLayout>
     );
 };
