@@ -4,8 +4,10 @@ import React from 'react';
 import Link from "next/link";
 import {BsChevronDown} from "react-icons/bs";
 import {AiOutlineShoppingCart} from "react-icons/ai";
+import {useRouter} from "next/navigation";
 
 const TopMenu = () => {
+    const router = useRouter();
     return (
         <section className="border-b" id="TopMenu">
             <div className="flex items-center justify-between w-full mx-auto max-w-[1200px]">
@@ -63,7 +65,9 @@ const TopMenu = () => {
                         배송지
                     </li>
                     <li className="px-3 hover:underline cursor-pointer">
-                        <div className="relative">
+                        <div className="relative"
+                             onClick={() => router.push('/cart')}
+                        >
                             <AiOutlineShoppingCart size={22} />
                             <div className="absolute text-[10px] -top-[2px] -right-[5px] bg-red-500 w-[14px] h-[14px] rounded-full text-white">
                                 <div className="flex items-center justify-center -mt-[1px]">

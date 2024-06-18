@@ -4,12 +4,15 @@ import React from 'react';
 import MainLayout from "@/components/layouts/MainLayout";
 import {product, products} from "@/mock/products";
 import SimilarProducts from "@/components/ui/similarProducts";
+import {useRouter} from "next/navigation";
 
 interface PageProps {
     params?: React.ReactNode,
 }
 
 const Page = ({params}: PageProps) => {
+
+    const router = useRouter();
     return (
         <MainLayout>
             <div className="max-w-[1200px] mx-auto flex items-start">
@@ -44,7 +47,9 @@ const Page = ({params}: PageProps) => {
                                 }
                             </div>
                             
-                            <button className="bg-[#3498C9] text-white py-2 px-20 rounded-full cursor-pointer">
+                            <button className="bg-[#3498C9] text-white py-2 px-20 rounded-full cursor-pointer"
+                                    onClick={() => router.push('/cart')}
+                            >
                                 장바구니 추가
                             </button>
 
